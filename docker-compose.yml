@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  eureka-server:
+    build: ./eureka-server
+    ports:
+      - 8761:8761
+
+  zuul-gateway:
+    build: ./zuul-gateway
+    depends_on:
+      - eureka-server
+    ports:
+      - 9999:9999
+
+  currency-service:
+    build: ./currency-service
+    depends_on:
+      - eureka-server
+      - zuul-gateway
+    ports:
+      - 8082:8082
