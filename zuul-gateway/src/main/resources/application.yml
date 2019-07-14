@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: CurrencyAPIGateway
+server:
+  port: 9999
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+zuul:
+  routes:
+    currency-service:
+      path: /currencyAPI/**
+      service-id: currency-service
+  health:
+    enabled: true
