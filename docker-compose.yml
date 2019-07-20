@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
 
   eureka-server:
@@ -20,3 +20,11 @@ services:
       - zuul-gateway
     ports:
       - 8082:8082
+
+  currency-service-loadbalancer:
+    build: ./currency-service-loadbalancer
+    depends_on:
+      - eureka-server
+      - zuul-gateway
+    ports:
+      - 5555:5555
