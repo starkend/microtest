@@ -7,7 +7,9 @@ server:
 
 currency-service:
   ribbon:
-    listOfServers: http://localhost:8082,http://localhost:8083
+    listOfServers: localhost:8082,localhost:8083
+    eureka:
+      enabled: true
 
 eureka:
   client:
@@ -20,5 +22,3 @@ eureka:
     lease-expiration-duration-in-seconds: 2
     metadata-map:
       instanceId: ${spring.application.name}:${random.value}
-    prefer-ip-address: true
-
