@@ -19,7 +19,11 @@ services:
       - eureka-server
       - zuul-gateway
     ports:
-      - 8082:8082
+      - "8082-8083:8082"
+
+#Add second instance in docker compose
+#after docker-compose up
+#docker-compose scale currency-service=2
 
   currency-service-loadbalancer:
     build: ./currency-service-loadbalancer
@@ -28,3 +32,4 @@ services:
       - zuul-gateway
     ports:
       - 5555:5555
+
