@@ -6,3 +6,5 @@ Microservices proof of concept
 - **Spring Boot**
 - **Eureka Server**
 - **Zuul Gateway Service**
+- **Ribbon Client Side Load Balancer**
+- **Feign HTTP Client**
