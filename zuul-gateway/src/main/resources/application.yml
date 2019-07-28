@@ -9,8 +9,8 @@ eureka:
       default-zone: http://localhost:8761/eureka
 zuul:
   routes:
-    currency-service:
-      path: /currencyAPI/**
-      service-id: currency-service
+    currency-service-loadbalancer:
+      path: /lb/**
+      service-id: currency-service-loadbalancer
   health:
     enabled: true
