@@ -1,4 +1,4 @@
-package com.starkend.currencyservice;
+package com.starkend.currencyservice.service;
 
 import java.util.List;
 

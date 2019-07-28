@@ -1,4 +1,4 @@
-package com.starkend.currencyservice;
+package com.starkend.currencyservice.service;
 
 import com.starkend.currencyservice.dto.CurrenciesDto;
 import org.springframework.beans.factory.annotation.Autowired;
