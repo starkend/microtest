@@ -6,6 +6,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 public class CurrencyController {
 
@@ -18,9 +20,11 @@ public class CurrencyController {
     @GetMapping("/currencies")
     public String getCurrencies() {
         String port = environment.getProperty("local.server.port");
-
         return currencyService.getCurrencies() + " port: " + port;
-//        return "Here is a currency list on port: " + port;
     }
 
+    @GetMapping("/time")
+    public String getTime() {
+        return LocalDateTime.now().toString();
+    }
 }
