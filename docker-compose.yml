@@ -33,3 +33,7 @@ services:
     ports:
       - 5555:5555
 
+#Zipkin
+# docker run -d -p 9411:9411 openzipkin/zipkin
+# Run
+# java -jar zipkin.jar

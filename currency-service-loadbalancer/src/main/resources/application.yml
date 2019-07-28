@@ -1,6 +1,18 @@
 spring:
   application:
     name: currency-service-loadbalancer
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+sample:
+  zipkin:
+    enabled: true
 
 server:
   port: 5555
@@ -10,7 +22,6 @@ currency-service:
     listOfServers: localhost:8082,localhost:8083
     eureka:
       enabled: true
-
 
 eureka:
   client:

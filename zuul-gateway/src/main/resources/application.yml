@@ -1,6 +1,19 @@
 spring:
   application:
     name: CurrencyAPIGateway
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+sample:
+  zipkin:
+    enabled: true
+
 server:
   port: 9999
 eureka:
@@ -14,3 +27,4 @@ zuul:
       service-id: currency-service-loadbalancer
   health:
     enabled: true
+
