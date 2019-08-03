@@ -9,3 +9,5 @@ Microservices proof of concept
 - **Ribbon Client Side Load Balancer**
 - **Feign HTTP Client**
 - **Zipkin Distributed Tracing**
+  - **Run Zipkin externally via Docker**
+    - docker run -d -p 9411:9411 openzipkin/zipkin
