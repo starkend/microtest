@@ -8,3 +8,4 @@ Microservices proof of concept
 - **Zuul Gateway Service**
 - **Ribbon Client Side Load Balancer**
 - **Feign HTTP Client**
+- **Zipkin Distributed Tracing**
