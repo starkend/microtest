@@ -8,3 +8,7 @@ spring:
   application:
     name: eureka-server
 
+management:
+  endpoint:
+    health:
+      enabled: true

@@ -16,10 +16,14 @@ sample:
 
 server:
   port: 9999
+
 eureka:
   client:
     service-url:
       default-zone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+
 zuul:
   routes:
     currency-service-loadbalancer:
