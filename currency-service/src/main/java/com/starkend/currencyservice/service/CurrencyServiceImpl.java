@@ -3,6 +3,7 @@ package com.starkend.currencyservice.service;
 import com.starkend.currencyservice.dto.CurrenciesDto;
 import com.starkend.currencyservice.dto.TimeDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -15,8 +16,11 @@ import java.util.List;
 @Service
 public class CurrencyServiceImpl implements CurrencyService {
 
-    private static final String CURRENCIES_URL = "https://api.coinbase.com/v2/currencies";
-    private static final String TIME_URL = "https://api.coinbase.com/v2/time";
+    @Value("${service.coinbase.currencies.url}")
+    private String CURRENCIES_URL;
+
+    @Value("${service.coinbase.time.url}")
+    private String TIME_URL;
 
     @Autowired
     private RestTemplate restTemplate;
