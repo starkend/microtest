@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertFalse;
@@ -25,6 +27,14 @@ public class CurrencyServiceTest {
 
         assertNotNull(currencyList);
         assertFalse(currencyList.isEmpty());
+    }
+
+    @Test
+    public void whenGetTime_thenReturnTimeSuccessfully() {
+        String time = currencyService.getTime();
+
+        assertNotNull(time);
+        System.out.println(time);
     }
 
 }
