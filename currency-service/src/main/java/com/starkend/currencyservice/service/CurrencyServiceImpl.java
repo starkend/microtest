@@ -10,8 +10,6 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.text.ParseException;
-import java.util.Date;
 import java.util.List;
 
 @Service
