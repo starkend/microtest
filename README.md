@@ -9,8 +9,8 @@ Microservices proof of concept
 - **Ribbon Client Side Load Balancer**
 - **Feign HTTP Client**
 - **Zipkin Distributed Tracing**
-  - **Run Zipkin via Docker**
+  - **Run via Docker**
     - docker run -d -p 9411:9411 openzipkin/zipkin
 - **RabbitMQ**
-  - **Run RabbitMQ via Docker**
+  - **Run via Docker**
     - docker run -d -p 15672:15672 -p 5672:5672 rabbitmq:3-management
