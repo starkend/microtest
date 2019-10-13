@@ -13,8 +13,11 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class CurrencyServiceProxy {
 
-    @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
+
+    public CurrencyServiceProxy(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @GetMapping("/currencies")
     @HystrixCommand(fallbackMethod = "currenciesFallback")
