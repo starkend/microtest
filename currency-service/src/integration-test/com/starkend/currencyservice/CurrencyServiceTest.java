@@ -17,7 +17,7 @@ import static org.junit.Assert.assertNotNull;
 public class CurrencyServiceTest {
 
     @Autowired
-    CurrencyService currencyService;
+    private CurrencyService currencyService;
 
     @Test
     public void whenGetCurrencies_thenReturnedPopulatedCurrenciesList() {

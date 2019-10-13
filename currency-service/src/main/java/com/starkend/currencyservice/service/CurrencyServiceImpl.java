@@ -2,7 +2,6 @@ package com.starkend.currencyservice.service;
 
 import com.starkend.currencyservice.dto.CurrenciesDto;
 import com.starkend.currencyservice.dto.TimeDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -22,8 +21,11 @@ public class CurrencyServiceImpl implements CurrencyService {
     @Value("${service.coinbase.time.url}")
     private String TIME_URL;
 
-    @Autowired
     private RestTemplate restTemplate;
+
+    public CurrencyServiceImpl(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public List<String> getCurrencies() {

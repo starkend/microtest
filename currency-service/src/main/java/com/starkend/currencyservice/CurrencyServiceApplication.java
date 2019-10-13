@@ -19,9 +19,6 @@ public class CurrencyServiceApplication {
     }
 
     @Bean
-    public CurrencyService currencyService() { return new CurrencyServiceImpl(); }
-
-    @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }
